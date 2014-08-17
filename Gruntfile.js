@@ -85,6 +85,8 @@ module.exports = function(grunt) {
     var version = grunt.option('atom') || grunt.config.get('atomv');
     grunt.config.set('atomv', version);
 
+    grunt.file.mkdir(grunt.config.get('atom'));
+
     grunt.task.run('download-atom-shell');
   });
 

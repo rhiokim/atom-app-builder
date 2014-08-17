@@ -1,6 +1,6 @@
 .DS_Store
 *.log
 build
-atoms
+atoms/*
 node_modules/*
 apps/*
