@@ -1,0 +1,29 @@
+{
+  "name": "atom-app-builder",
+  "version": "0.0.1",
+  "description": "Builder for app based on atom-shell",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rhiokim/atom-app-builder"
+  },
+  "keywords": [
+    "atom",
+    "atom-shell",
+    "builder"
+  ],
+  "author": "rhio.kim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhiokim/atom-app-builder/issues"
+  },
+  "homepage": "https://github.com/rhiokim/atom-app-builder",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-shell": "~0.7.0",
+    "grunt-copy": "~0.1.0"
+  }
+}

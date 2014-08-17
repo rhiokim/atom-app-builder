@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+build
+atoms
+node_modules/*
