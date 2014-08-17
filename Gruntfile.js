@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-download-atom-shell');
 
   grunt.initConfig({
     atomv: '0.15.7',
@@ -26,6 +27,11 @@ module.exports = function(grunt) {
         ]
       }
 
+    },
+
+    'download-atom-shell': {
+      version: '<%= atomv %>',
+      outputDir: '<%= atom %>'
     },
 
     requirejs: {},
@@ -63,10 +69,23 @@ module.exports = function(grunt) {
     var appname = grunt.option('app');
     var bp = grunt.option('bp') || '.default';
 
+    if (grunt.file.isDir('./apps/'+appname)) {
+      grunt.fail.warn('\nCan not create new app. \n"'+ appname +'" app is already exist.\n\n');
+      return;
+    }
+
     grunt.config.set('bp', bp);
     grunt.config.set('newappname', appname);
 
     grunt.task.run('copy:newapp');
+  });
+
+
+  grunt.registerTask('down', function() {
+    var version = grunt.option('atom') || grunt.config.get('atomv');
+    grunt.config.set('atomv', version);
+
+    grunt.task.run('download-atom-shell');
   });
 
   grunt.registerTask('default', [ ]);

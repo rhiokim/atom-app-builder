@@ -20,4 +20,39 @@ $ cd /path/to/atom-app-builder
 $ npm install
 ```
 
-3.
+## Create your app
+
+1. create new app
+
+```bash
+$ grunt new --app=myApp
+```
+
+## Run your app
+
+1. run myApp
+
+```bash
+$ grunt run --app=myApp
+```
+
+## Update atom-shell
+
+1. download bin
+
+```bash
+$ grunt down --atom=0.x.x
+```
+
+## Package your app
+
+coming
+
+
+## Distribution
+
+## Contribution
+
+## License
+
+MIT
