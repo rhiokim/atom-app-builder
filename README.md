@@ -20,6 +20,12 @@ $ cd /path/to/atom-app-builder
 $ npm install
 ```
 
+3. setup atom-shell
+
+```bash
+$ grunt down --atom=x.x.x
+```
+
 ## Create your app
 
 1. create new app
